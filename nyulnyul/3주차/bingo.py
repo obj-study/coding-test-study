@@ -4,8 +4,6 @@
 '''
 
 # 풀이 코드 기입
-def check(board):
-
 
 bingo = [[0 for col in range(5)] for row in range(5)]
 MCbingo = [[0 for col in range(5)] for row in range(5)]
