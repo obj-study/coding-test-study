@@ -34,7 +34,7 @@ for j in range(students):
         for k in range(switch):
             if k == mannum[k] :
                 if mannum[k-1] == mannum[k+1]:
-
+                    switch[k] = 1
 
 
 
