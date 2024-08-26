@@ -16,12 +16,12 @@ n = int(input())
 
 open_map = []
 for _ in range(n):
-    open_map.append(list(input()))
+    open_map.append(list(input())) # 지뢰가 보이는 맵 초기화 
 play_map = []
 for _ in range(n):
-    play_map.append(list(input()))
+    play_map.append(list(input())) # 플레이하는 사람이 연 맵 초기화
 
-def count_bug(li, x, y):
+def count_bug(li, x, y): # 주변 지뢰 세기
     v_list = [[-1, 0], [-1, 1], [-1, -1], [0, -1], [0, 1], [1, 0], [1, -1], [1, 1]]
     bug_cnt = 0
     for v in v_list:
@@ -39,10 +39,10 @@ for i in range(n):
     for j in range(n):
         if play_map[i][j] == "x":
             if open_map[i][j] == "*":
-                mine_clicked = True
+                mine_clicked = True # 지뢰를 밟은 경우를 위한 값
             else:
                 cnt = count_bug(open_map, i, j)
-                play_map[i][j] = str(cnt)
+                play_map[i][j] = str(cnt) # 밟지 않은경우 계속 지뢰 개수 넣기
 
 # 지뢰를 클릭한 경우, 모든 지뢰를 표시
 if mine_clicked:
