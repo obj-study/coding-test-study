@@ -37,7 +37,6 @@ arr[i+1][j+1] or arr[i][j+1] or arr[i-1][j+1] or arr[i+1][j] or arr[i][j] or arr
 # 풀이 코드 기입
 n = int(input())
 
-
 n = 8
 arr = []
 arr2 =[]
